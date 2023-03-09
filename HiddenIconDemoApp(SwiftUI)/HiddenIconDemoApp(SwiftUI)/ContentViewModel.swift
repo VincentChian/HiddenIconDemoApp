@@ -40,7 +40,7 @@ class ContentViewModel: ObservableObject {
                 其他 Process 則會等待前面的 Process 執行完畢後再依序執行，
                 從而避免了同時產生太多 Process 造成的效能問題。*/
         
-        commandQueue.async { [weak self] in
+        commandQueue.async { 
             
             // 註：Process是一个可以执行终端命令的类，实现执行终端命令函数(From 掘金)
             let task = Process()
